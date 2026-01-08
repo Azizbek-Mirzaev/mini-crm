@@ -20,6 +20,9 @@ use App\Http\Controllers\LeadController;
 Route::get('/', function () {
     return redirect()->route('leads.index');
 });
+Route::middleware('auth')->group(function () {
+    Route::resource('leads', LeadController::class);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -34,7 +37,5 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::middleware('auth')->group(function () {
-    Route::resource('leads', LeadController::class);
-});
+
 

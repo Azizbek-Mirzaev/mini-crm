@@ -38,12 +38,12 @@ public function index(Request $request)
     }
 
     // 🔽 ФИЛЬТР ПО СТАТУСУ
-    if ($request->filled('status')) {
-        $query->where('status', $request->status);
+       if ($request->filled('status')) {
+        $query->where('status', '=', $request->status);
     }
-
+dd($request->all());
     // ⏱ СОРТИРОВКА
-    $leads = $query->orderBy('created_at', 'desc')->get();
+     $leads = $query->orderByDesc('created_at')->get();
 
     return view('leads.index', compact('leads'));
 }

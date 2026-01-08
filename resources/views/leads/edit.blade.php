@@ -9,7 +9,7 @@
         <input
             name="full_name"
             class="w-full border p-2 rounded"
-            value="{{ old('full_name', $lead->full_name) }}"
+            value="{{ old('name', $lead->name) }}"
         >
 
         <input

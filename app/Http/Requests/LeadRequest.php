@@ -9,7 +9,7 @@ class LeadRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'full_name' => 'required|min:3',
+            'name' => 'required|min:3',
             'phone' => 'required|min:7',
             'status' => 'required|in:new,in_progress,done',
             'note' => 'nullable|string',

@@ -1,7 +1,7 @@
 <x-app-layout>
 <div class="max-w-3xl mx-auto p-6 space-y-4">
 
-    <h1 class="text-2xl font-bold">{{ $lead->full_name }}</h1>
+    <h1 class="text-2xl font-bold">{{ $lead->name }}</h1>
 
     <p><strong>Телефон:</strong> {{ $lead->phone }}</p>
     <p><strong>Статус:</strong> {{ $lead->status }}</p>

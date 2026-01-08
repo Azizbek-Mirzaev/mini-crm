@@ -6,10 +6,10 @@
         @csrf
 
         <input
-            name="full_name"
+            name="name"
             placeholder="ФИО"
             class="w-full border p-2 rounded"
-            value="{{ old('full_name') }}"
+            value="{{ old('name') }}"
         >
 
         <input
